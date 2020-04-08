@@ -1,8 +1,8 @@
-
 type Category {
-  id: ID,
+  id: ID
   category: String
 }
+
 
 type Query {
   categories: [Category]

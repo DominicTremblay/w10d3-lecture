@@ -10,5 +10,3 @@ const books = [
     author: 'Michael Crichton',
   },
 ];
-
-module.exports = books;

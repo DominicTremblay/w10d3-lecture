@@ -29,8 +29,8 @@ const typeDefs = gql`
   # clients can execute, along with the return type for each. In this
   # case, the "books" query returns an array of zero or more Books (defined above).
   type Query {
-    books: [Book],
-    book(id: ID!): Book!
+    books: [Book]
+    book(id: ID!): Book! 
   }
 `;
 
@@ -40,17 +40,17 @@ const resolvers = {
   Query: {
     books: () => books,
     book: (root, args, context, info) => {
-      console.log('Book Resolver');
-      console.log("ARGS", args);
-      const result = books.find(book => book.id === Number(args.id));
-      console.log('result', result);
-      return result;
+      console.log("book Resolver");
+      console.log('args:', args);
       
+      const result = books.find(book => book.id === Number(args.id))
+      console.log("result:", result);
+      return result;
     }
-    
-    
+
+
   },
-};  
+};
 
 // The ApolloServer constructor requires two parameters: your schema
 // definition and your set of resolvers.

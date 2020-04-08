@@ -1,8 +1,8 @@
 type Todo {
-  id: ID!,
-  task: String!,
+  id: ID,
+  task: String,
   completed: Boolean,
-  category_id: Int!
+  category_id: Int
 }
 
 extend type Query {
@@ -10,24 +10,13 @@ extend type Query {
 }
 
 input NewTodoInput {
-  task: String!,
-  completed: Boolean,
+  task: String!
+  completed: Boolean!
   category_id: Int!
 }
 
-input UpdateTodoInput {
-  id: ID!
-  task: String,
-  completed: Boolean,
-  category_id: Int
-}
-
-type Message {
-  msg: String!
-}
-
 type Mutation {
-  addTodo(input: NewTodoInput): Todo!
-  deleteTodo(id: ID!): Message
-  updateTodo(input: UpdateTodoInput): Todo!
+  addTodo(input: NewTodoInput): Todo
+  # deleteTodo(id: ID): String
+  # updateTodo(input UpdateTodoInput): Todo
 }

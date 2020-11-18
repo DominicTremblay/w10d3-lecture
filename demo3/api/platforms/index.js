@@ -1,7 +1,7 @@
 const typeDefs = require('../../utils/loadSchema')(
-  'categories/categories.graphql',
+  'platforms/platforms.graphql'
 );
-const resolvers = require('./categories.resolver');
+const resolvers = require('./platforms.resolver.js');
 
 module.exports = {
   typeDefs,

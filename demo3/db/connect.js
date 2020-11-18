@@ -1,8 +1,6 @@
 const { Client } = require('pg');
 require('dotenv').config();
 
-console.log("user", process.env.PGUSER )
-
 const connectOptions = {
   host: process.env.PGHOST,
   user: process.env.PGUSER,
@@ -19,13 +17,6 @@ pgClient
     console.log(`Connected to ${pgClient.database}`);
   })
   .catch(err => console.error('connection error', err.stack));
-
-// const todos = async() => {
-//   const result = await pgClient.query('SELECT * FROM todos');
-//   console.log(result.rows);
-// };
-
-// todos();
 
 module.exports = {
   db: pgClient,

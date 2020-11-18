@@ -1,0 +1,26 @@
+type Game {
+  id: ID
+  title: String
+  rating: String
+  genre: String
+}
+
+type Query {
+  games: [Game]
+  game(id: ID!): Game
+}
+
+input NewGameInput {
+  title: String!
+  rating: String
+  genre: String
+}
+
+type Message {
+  msg: String!
+}
+
+type Mutation {
+  addNewGame(input: NewGameInput): Game
+  deleteGame(id: ID): Message
+}

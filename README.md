@@ -42,7 +42,7 @@ With GraphQL:
 ## Core Concepts
 
 * GraphQL has a clear separation of structure and behavior
-  + Schema: What are the qeries and the types
+  + Schema: What are the queries and the types
   + Resolvers: How do we get the data
 
 ### GraphQL SDL (schema definition language)
@@ -62,7 +62,7 @@ With GraphQL:
 
 ## Tools
 
-* GraphQL Server (Appollo, GraphQL Yoga)
+* GraphQL Server (Apollo, GraphQL Yoga)
 * GraphQL Playground
 * Node-postgres
 * Postgresql database
